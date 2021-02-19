@@ -28,5 +28,5 @@ class SystemInfo:
         return answer
     
     def criador():
-        answer = 'quen me criou foi o paolo'
+        answer = 'quem me criou foi o paolo'
         return answer
