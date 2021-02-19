@@ -1,5 +1,0 @@
-bibliotecas:
-1-SpeechRecognition 3.8.1
-    link:https://pypi.org/project/SpeechRecognition/
-2- Vosk offline speech recognation
-    link: https://alphacephei.com/vosk/
