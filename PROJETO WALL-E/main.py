@@ -7,16 +7,9 @@ from vosk import Model, KaldiRecognizer
 import pyaudio
 import sys
 import pyttsx3 #sintese de fala
-import core
+import core #comandos
 
 #sintese de fala
-#engine = pyttsx3.init()
-
-#engine.setProperty('voice', voices[-1].id)
-
-#engine.say("Uuuuaaallyyyye")
-#engine.runAndWait()
-
 engine = pyttsx3.init()
 
 voices = engine.getProperty('voices')
