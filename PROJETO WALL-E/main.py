@@ -7,6 +7,7 @@ from vosk import Model, KaldiRecognizer
 import pyaudio
 import sys
 import pyttsx3 #sintese de fala
+import core
 
 #sintese de fala
 #engine = pyttsx3.init()
@@ -34,10 +35,8 @@ p = pyaudio.PyAudio()
 stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=4000)
 stream.start_stream()
 
-# Primeiro Audio, inicialização.
-#fala("Uuuuaaallyyyye")
 
-
+#loop
 while True:
     data = stream.read(4000)
     if len(data) == 0:
@@ -50,4 +49,7 @@ while True:
             text = result['text']
             
             print(text)
-            fala(text)
+            #fala(text)#repete oq fala
+
+            if text == "que horas são" or text == "me diga as horas" or text == "fala a hora":
+                fala(core.SystemInfo.get_time())
